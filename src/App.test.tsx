@@ -7,7 +7,9 @@ describe('App', () => {
     render(<App />)
     
     expect(screen.getByText('Writing Area')).toBeInTheDocument()
-    expect(screen.getByText('Terrarium Placeholder')).toBeInTheDocument()
+    expect(screen.getByText('Stats')).toBeInTheDocument()
+    expect(screen.getByText(/Music Intensity/)).toBeInTheDocument()
+    expect(screen.getByText('Adjust to control rainfall')).toBeInTheDocument()
   })
 })
 
