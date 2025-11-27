@@ -6,10 +6,10 @@ describe('App', () => {
   it('renders the writing area and terrarium', () => {
     render(<App />)
     
-    expect(screen.getByText('Writing Area')).toBeInTheDocument()
-    expect(screen.getByText('Stats')).toBeInTheDocument()
+    expect(screen.getByText(/Writing Area/)).toBeInTheDocument()
+    expect(screen.getByText('Writing Stats')).toBeInTheDocument()
     expect(screen.getByText(/Music Intensity/)).toBeInTheDocument()
-    expect(screen.getByText('Adjust to control rainfall')).toBeInTheDocument()
+    expect(screen.getByText(/Adjust to control rainfall/)).toBeInTheDocument()
   })
 })
 

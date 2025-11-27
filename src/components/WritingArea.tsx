@@ -20,11 +20,14 @@ export function WritingArea({ onTextChange }: WritingAreaProps) {
   )
 
   return (
-    <div className="h-full p-6 bg-gray-50 border-r border-gray-200 flex flex-col">
-      <h2 className="text-2xl font-bold mb-4 text-gray-800">Writing Area</h2>
+    <div className="h-full p-6 bg-gradient-to-br from-gray-50 to-gray-100 border-r border-gray-200 flex flex-col shadow-inner">
+      <div className="mb-4">
+        <h2 className="text-2xl font-bold text-gray-800 mb-1">✍️ Writing Area</h2>
+        <p className="text-sm text-gray-500">Your words become sunlight for your plant</p>
+      </div>
       <textarea
-        className="flex-1 w-full p-4 border border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-        placeholder="Start writing here..."
+        className="flex-1 w-full p-4 border-2 border-gray-300 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-400 transition-all bg-white shadow-sm"
+        placeholder="Start writing here... Your words will bring light to your soul plant 🌱"
         value={text}
         onChange={handleChange}
       />

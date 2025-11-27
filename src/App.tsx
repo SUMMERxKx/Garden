@@ -12,10 +12,12 @@ function App() {
   const climate = useClimate(stats, musicIntensity)
 
   return (
-    <div className="h-screen w-screen flex overflow-hidden bg-gray-100">
-      <div className="w-1/2 flex flex-col">
-        <WritingArea />
-        <div className="p-4 border-t border-gray-200 bg-white">
+    <div className="h-screen w-screen flex overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="w-1/2 flex flex-col border-r border-gray-300 shadow-lg">
+        <div className="flex-1 overflow-hidden">
+          <WritingArea />
+        </div>
+        <div className="p-4 border-t border-gray-300 bg-white/90 backdrop-blur-sm">
           <MusicControl
             musicIntensity={musicIntensity}
             onMusicIntensityChange={setMusicIntensity}
@@ -23,10 +25,10 @@ function App() {
         </div>
       </div>
       <div className="w-1/2 flex flex-col">
-        <div className="flex-1">
+        <div className="flex-1 overflow-hidden">
           <Terrarium climate={climate} />
         </div>
-        <div className="p-4 border-t border-gray-200 bg-white">
+        <div className="p-4 border-t border-gray-300 bg-white/90 backdrop-blur-sm">
           <StatsPanel writingStats={stats} climate={climate} />
         </div>
       </div>
